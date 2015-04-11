@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  pool: 5
+
+development:
+  <<: *default
+  database: sportphotoz_development
+
+test:
+  <<: *default
+  database: sportphotoz_test
+
+production:
+  <<: *default
+  database: sportphotoz_production
+  username: sportphotoz
+  password: <%= ENV['SPORTPHOTOZ_DATABASE_PASSWORD'] %>
