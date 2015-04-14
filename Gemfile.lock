@@ -52,6 +52,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-firebug (2.0.0)
+      capybara (>= 1.0, < 3.0)
+      selenium-webdriver
     childprocess (0.5.6)
       ffi (~> 1.0, >= 1.0.11)
     chromedriver-helper (0.0.8)
@@ -222,6 +225,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   capybara (~> 2.4.4)
+  capybara-firebug (~> 2.0.0)
   chromedriver-helper
   database_cleaner (~> 1.4.1)
   factory_girl_rails (~> 4.5.0)
