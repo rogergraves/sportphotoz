@@ -15,7 +15,7 @@ The Sportphotoz app is built on:
 2. Install the optional Command Line Tools in XCode
 3. Install the latest version of Homebrew: brew.sh/
 4. Install the latest version of RVM: rvm.io/
-5. Install Ruby from terminal: 'rvm install 2.1.0'
+5. Install Ruby from terminal: 'rvm install 2.1.5'
 6. Install posgtresql from terminal: 'brew install postgresql' and follow on screen instructions (very important)
 7. Create postgresql superuser postgres: 'createuser postgres -s'
 8. Clone the git repo in terminal: 'git clone git@github.com:rogergraves/sportphotoz.git'
