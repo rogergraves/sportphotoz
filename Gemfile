@@ -35,4 +35,5 @@ group :test do
   gem 'selenium-webdriver', '~> 2.45.0'               # https://code.google.com/p/selenium/
   gem 'chromedriver-helper'                           # Easy installation and use of chromedriver, the Chromium project's selenium webdriver adapter.
   gem 'turnip', '~> 1.2.4'                            # Provides the ability to define steps and run Gherkin files from with RSpec
+  gem 'capybara-firebug', '~> 2.0.0'                  # Provides a dead-simple way to run scenarios with Firebug enabled under the selenium driver
 end
