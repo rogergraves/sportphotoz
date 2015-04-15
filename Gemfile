@@ -9,7 +9,7 @@ gem 'uglifier', '~> 2.7.1'                            # Minifies javascript file
 gem 'jquery-rails', '~> 4.0.3'                        # jQuery and the jQuery-ujs driver
 gem 'turbolinks', '~> 2.5.3'                          # Makes following links in your web application faster: https://github.com/rails/turbolinks/
 gem 'jbuilder', '~> 2.2.13'                           # Create JSON structures via a Builder-style DSL: https://github.com/rails/jbuilder
-
+gem 'faker', '~> 1.4.3'                               # Create random values
 group :production do
   gem 'rails_12factor', '~> 0.0.3'                    # Helps speed up deploys on heroku
 end
