@@ -11,7 +11,9 @@ gem 'turbolinks', '~> 2.5.3'                          # Makes following links in
 gem 'jbuilder', '~> 2.2.13'                           # Create JSON structures via a Builder-style DSL: https://github.com/rails/jbuilder
 gem 'activeadmin', '~> 1.0.0.pre1'                    # Create Admin side
 gem 'devise', '~> 3.4.1'                              # Authentification
-
+gem 'bootstrap-sass', '~> 3.3.4.1'                    # Styling prototype
+gem 'simple_form', '~> 3.1.0'                         # Makes forms easy
+gem 'masonry-rails', '~> 0.2.4'                       # For adaptive design
 group :production do
   gem 'rails_12factor', '~> 0.0.3'                    # Helps speed up deploys on heroku
 end

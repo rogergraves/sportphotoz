@@ -52,6 +52,9 @@ GEM
     arbre (1.0.3)
       activesupport (>= 3.0.0)
     arel (6.0.0)
+    autoprefixer-rails (5.1.9)
+      execjs
+      json
     awesome_print (1.6.1)
     bcrypt (3.1.10)
     better_errors (2.1.1)
@@ -60,6 +63,9 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.3.4.1)
+      autoprefixer-rails (>= 5.0.0.1)
+      sass (>= 3.2.19)
     bourbon (4.2.2)
       sass (~> 3.4)
       thor
@@ -145,6 +151,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    masonry-rails (0.2.4)
+      railties
     meta_request (0.3.4)
       callsite (~> 0.0, >= 0.0.11)
       rack-contrib (~> 1.1)
@@ -239,6 +247,9 @@ GEM
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0)
+    simple_form (3.1.0)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -280,6 +291,7 @@ DEPENDENCIES
   awesome_print
   better_errors
   binding_of_caller
+  bootstrap-sass (~> 3.3.4.1)
   capybara (~> 2.4.4)
   capybara-firebug (~> 2.0.0)
   chromedriver-helper
@@ -290,6 +302,7 @@ DEPENDENCIES
   git-smart (~> 0.1.10)
   jbuilder (~> 2.2.13)
   jquery-rails (~> 4.0.3)
+  masonry-rails (~> 0.2.4)
   meta_request (~> 0.3.4)
   pg (~> 0.18.1)
   quiet_assets
@@ -298,6 +311,7 @@ DEPENDENCIES
   rspec-rails (~> 3.2.1)
   sass-rails (~> 5.0.3)
   selenium-webdriver (~> 2.45.0)
+  simple_form (~> 3.1.0)
   turbolinks (~> 2.5.3)
   turnip (~> 1.2.4)
   uglifier (~> 2.7.1)
