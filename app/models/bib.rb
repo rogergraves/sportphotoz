@@ -1,4 +1,4 @@
 class Bib < ActiveRecord::Base
   belongs_to :photo
-  validate_uniqueness_of :number
+  validates :number, uniqueness: true
 end
