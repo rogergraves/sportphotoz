@@ -27,4 +27,4 @@ server.key
 *.crt
 *.key
 *.psql
-*.dump
+*.dumpdatabase.yml
