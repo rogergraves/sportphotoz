@@ -123,6 +123,8 @@ GEM
       colorize
     globalid (0.3.5)
       activesupport (>= 4.1.0)
+    haml (4.0.6)
+      tilt
     has_scope (0.6.0)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -151,6 +153,9 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    mail_form (1.5.1)
+      actionmailer (>= 3.2, < 5)
+      activemodel (>= 3.2, < 5)
     masonry-rails (0.2.4)
       railties
     meta_request (0.3.4)
@@ -300,8 +305,10 @@ DEPENDENCIES
   factory_girl_rails (~> 4.5.0)
   faker (~> 1.4.3)
   git-smart (~> 0.1.10)
+  haml (~> 4.0.6)
   jbuilder (~> 2.2.13)
   jquery-rails (~> 4.0.3)
+  mail_form (~> 1.5.1)
   masonry-rails (~> 0.2.4)
   meta_request (~> 0.3.4)
   pg (~> 0.18.1)

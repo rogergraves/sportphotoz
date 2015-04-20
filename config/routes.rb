@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  root 'pages#home'
+  get 'pages/home'
+
+  get 'pages/contact_us'
+
+  get 'pages/about'
+
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.

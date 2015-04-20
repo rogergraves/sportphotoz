@@ -14,6 +14,8 @@ gem 'devise', '~> 3.4.1'                              # Authentification
 gem 'bootstrap-sass', '~> 3.3.4.1'                    # Styling prototype
 gem 'simple_form', '~> 3.1.0'                         # Makes forms easy
 gem 'masonry-rails', '~> 0.2.4'                       # For adaptive design
+gem 'haml', '~> 4.0.6'                                # is a layer on top of HTML or XML that's designed to express the structure of documents
+gem 'mail_form', '~> 1.5.1'                           # Send e-mail straight from forms in Rails with I18n, validations, attachments and request information.
 group :production do
   gem 'rails_12factor', '~> 0.0.3'                    # Helps speed up deploys on heroku
 end
