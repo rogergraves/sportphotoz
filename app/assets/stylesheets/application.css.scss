@@ -17,10 +17,49 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+/*homepage*/
 body{
   background: url('/assets/background.jpg') no-repeat center center fixed;
+  background-size: 100%;
+  padding-top: 100px;
+  padding-right: 50px;
+  padding-left: 200px;
+  font: 16px "Lucida Grande", Helvetica;
+  font-size: 1.2vw;
+}
+/*responsive_logo*/
+img {
+  display: inline-block;
+  height: auto;
+  max-width: 60%;
+}
+/*header*/
+.navbar-brand {
+  float: left;
+  margin-right: 5px;
+  margin-left: -15px;
+}
+nav.navbar.navbar
+{
+  margin-left: 100px;
+}
+.navbar-nav {
+  float: left;
+  padding-right: 150px;
+  padding-top: 17px;
+  margin-bottom: 0;
+  a {
+      color: #bfbfbf;
+      font-weight: normal;
+      text-decoration: none;
+      a:hover {
+        text-decoration: none;
+      }
+    }
 }
 .hidden { display: none; }
+/*responsive_font*/
+
 /*flash*/
 
 .alert-error {

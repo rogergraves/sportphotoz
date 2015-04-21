@@ -6,9 +6,12 @@
   = javascript_include_tag 'application', 'data-turbolinks-track' => true 
   = csrf_meta_tags
 %body
-  %nav.navbar.navbar-default
+  %nav.navbar.navbar
     .container
-      .navbar-brand= link_to "Sportphotoz", root_path
+      .navbar-brand= link_to image_tag("logo.png", class: "brand", style: "margin-top: 10 px;"), root_path
+      %ul.nav.navbar-nav
+        %li= link_to "Contact Us", contacts_path
+        %li= link_to "About", pages_about_path
     .container
   -flash.each do |name,msg|
     = content_tag :div, msg, class: "alert alert-info" 
