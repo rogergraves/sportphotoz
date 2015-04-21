@@ -1,4 +1,6 @@
 class Bib < ActiveRecord::Base
-  belongs_to :photo
+
+  has_many :photos
   validates :number, uniqueness: true
+
 end
