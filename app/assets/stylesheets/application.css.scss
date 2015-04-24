@@ -24,7 +24,7 @@ body{
   padding-top: 100px;
   padding-right: 50px;
   padding-left: 200px;
-  font: 16px "Lucida Grande", Helvetica;
+  font: 18px "Lucida Grande", Helvetica;
   font-size: 1.2vw;
 }
 /*responsive_logo*/
@@ -52,14 +52,33 @@ nav.navbar.navbar
       color: #bfbfbf;
       font-weight: normal;
       text-decoration: none;
-      a:hover {
+      &:hover {
         text-decoration: none;
       }
     }
 }
 .hidden { display: none; }
 /*responsive_font*/
-
+h3{
+    color: #FFF;
+    font: 18px "Lucida Grande", Helvetica;
+    font-size: 1.2vw;
+    font-weight: normal;
+}
+/*contact form*/
+#contacts{
+    .btn-primary{
+    color: #ffffff;
+     background-color: #a35b35;
+  }
+}
+/*about*/
+#about{
+   padding-top: 50px;
+   p{
+      color: #ffffff;
+}
+}
 /*flash*/
 
 .alert-error {
