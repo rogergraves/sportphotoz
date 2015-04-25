@@ -1,7 +1,6 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: khrystynaklochko
   pool: 5
 
 development:
