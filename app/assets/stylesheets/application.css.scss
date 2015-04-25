@@ -17,15 +17,22 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-/*homepage*/
+
 body{
   background: url('/assets/background.jpg') no-repeat center center fixed;
   background-size: 100%;
   padding-top: 100px;
-  padding-right: 50px;
-  padding-left: 200px;
+  padding-left: 250px;
   font: 18px "Lucida Grande", Helvetica;
   font-size: 1.2vw;
+}
+.brand {
+   padding-right: 50px;
+}
+
+/*homepage*/
+#homepage{
+  
 }
 /*responsive_logo*/
 img {
@@ -39,8 +46,10 @@ img {
   margin-right: 5px;
   margin-left: -15px;
 }
-nav.navbar.navbar
-{
+nav.navbar.navbar{
+  padding-right: 150px;
+}
+ul nav.navbar.navbar{
   margin-left: 100px;
 }
 .navbar-nav {
@@ -49,10 +58,10 @@ nav.navbar.navbar
   padding-top: 17px;
   margin-bottom: 0;
   a {
-      color: #bfbfbf;
-      font-weight: normal;
-      text-decoration: none;
-      &:hover {
+    color: #bfbfbf;
+    font-weight: normal;
+    text-decoration: none;
+    &:hover {
         text-decoration: none;
       }
     }
@@ -60,51 +69,66 @@ nav.navbar.navbar
 .hidden { display: none; }
 /*responsive_font*/
 h3{
-    color: #FFF;
-    font: 18px "Lucida Grande", Helvetica;
-    font-size: 1.2vw;
-    font-weight: normal;
+  color: #FFF;
+  font: 18px "Lucida Grande", Helvetica;
+  font-size: 1.2vw;
+  font-weight: normal;
 }
 /*contact form*/
-#contacts{
-    .btn-primary{
-    color: #ffffff;
-     background-color: #a35b35;
-  }
+#contact{
+padding-top: 40px;
+h3{
+  color: #FFF;
+  font: 18px "Lucida Grande", Helvetica;
+  font-size: 1.2vw;
+  font-weight: normal;
+}
+.form-control {
+   background-color: rgba(0, 0, 0, 0);
+   margin-top: 5px;
+   border-radius: 0px;
+}
+.btn {
+    padding: 14px 24px;
+    margin-top: 10px;
+    border: 0 none;
+    border-radius: 0px;
+    font-weight: 500;
+}
 }
 /*about*/
 #about{
-   padding-top: 50px;
+   padding-top: 80px;
    p{
-      color: #ffffff;
-}
+    color: #ffffff;
+  }
 }
 /*flash*/
 
 .alert-error {
-background-color: #f2dede;
-border-color: #eed3d7;
-color: #b94a48;
-text-align: left;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
 }
 
 .alert-alert {
-background-color: #f2dede;
-border-color: #eed3d7;
-color: #b94a48;
-text-align: left;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
 }
 
 .alert-success {
-background-color: #dff0d8;
-border-color: #d6e9c6;
-color: #468847;
-text-align: left;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
 }
 
 .alert-notice {
-background-color: #dff0d8;
-border-color: #d6e9c6;
-color: #468847;
-text-align: left;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
 }
