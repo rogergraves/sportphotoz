@@ -18,6 +18,8 @@ gem 'masonry-rails', '~> 0.2.4'                       # For adaptive design
 gem 'haml', '~> 4.0.6'                                # is a layer on top of HTML or XML that's designed to express the structure of documents
 gem 'mail_form', '~> 1.5.1'                           # Send e-mail straight from forms in Rails with I18n, validations, attachments and request information.
 gem 'paperclip', '~> 4.2.1'                           # Easy upload management for ActiveRecord
+gem 'aws-sdk', '~> 2.0.40'                            # S3 API
+gem 's3_direct_upload', '~> 0.1.7'                    # direct upload form helper and assets
 group :production do
   gem 'rails_12factor', '~> 0.0.3'                    # Helps speed up deploys on heroku
 end
