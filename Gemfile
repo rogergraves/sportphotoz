@@ -40,6 +40,7 @@ end
 
 group :test do
   gem 'rspec-rails', '~> 3.2.1'                       # https://www.relishapp.com/rspec/rspec-rails/docs/gettingstarted
+  gem 'shoulda-matchers', '~> 2.8.0'                  # Collection of testing matchers extracted from Shoulda
   gem 'capybara', '~> 2.4.4'                          # Acceptance test framework for web applications http://jnicklas.github.com/capybara/
   gem 'database_cleaner', '~> 1.4.1'                  # database_cleaner is not required, but highly recommended
   gem 'selenium-webdriver', '~> 2.45.0'               # https://code.google.com/p/selenium/
