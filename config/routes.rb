@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   match '/contacts',  to: 'contacts#new',  via: 'get'
   resources "contacts", only: [:new, :create]
 
+  resources :marathons
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.

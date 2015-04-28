@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150421171118) do
+ActiveRecord::Schema.define(version: 20150428172006) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,12 +63,49 @@ ActiveRecord::Schema.define(version: 20150421171118) do
     t.string   "name"
   end
 
-  create_table "photos", force: :cascade do |t|
-    t.string   "url"
+  create_table "marathons", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.string   "slug",       null: false
+    t.datetime "event_date"
+    t.string   "aws_prefix", null: false
+    t.boolean  "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "event_id"
-    t.integer  "bib_id"
+  end
+
+  add_index "marathons", ["slug"], name: "index_marathons_on_slug", using: :btree
+
+  create_table "participants", force: :cascade do |t|
+    t.integer  "bib"
+    t.integer  "place"
+    t.time     "gun_time"
+    t.time     "chip_time"
+    t.integer  "runner_id"
+    t.integer  "marathon_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "participants", ["bib", "runner_id", "marathon_id"], name: "index_participants_on_bib_and_runner_id_and_marathon_id", unique: true, using: :btree
+
+  create_table "photos", force: :cascade do |t|
+    t.string   "aws_key"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "participant_id"
+    t.integer  "marathon_id"
+  end
+
+  create_table "runners", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "gender",     limit: 2, default: 0
+    t.integer  "age"
+    t.string   "email"
+    t.string   "state",      limit: 2
+    t.string   "city"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
   end
 
 end

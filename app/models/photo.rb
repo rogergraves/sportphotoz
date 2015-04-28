@@ -1,8 +1,16 @@
 class Photo < ActiveRecord::Base
 
-  belongs_to :bib
-  belongs_to :event
+  belongs_to :participant
+  belongs_to :marathon
+
+  # TODO
+  # original
+  # preview
+
+  belongs_to :marathon
   
-  validates :url, uniqueness: true
+  validates :aws_key, presence: true
+  validates :participant_id, presence: true
+  validates :marathon_id, presence: true
 
 end
