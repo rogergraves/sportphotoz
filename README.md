@@ -6,9 +6,12 @@ The Sportphotoz app is built on:
     * Rails 4.2.1
     * Postgresql
     * Hosted by heroku with asset storage yet to be determined
-    * Continuous Integration service by yet to be determined
+    * Continuous Integration service by CircleCI
     * Application monitoring by NewRelic (later)
-    * Code complexity and security monitoring by CodeClimate (later)
+    * Code complexity and security monitoring by CodeClimate
+
+# Build Status
+[![Circle CI](https://circleci.com/gh/rogergraves/sportphotoz/tree/master.svg?style=svg)](https://circleci.com/gh/rogergraves/sportphotoz/tree/master)
 
 # Recommended New Development Machine Install (Mac)
 1. Install the latest version of XCode
@@ -71,3 +74,44 @@ You can then add heroku to your git remote, if it's not already there:
 Then to do a deploy to production:
 
         $ git push production master
+        
+#AWS Instructions
+
+1. Log in to your AWS account and make sure it's confirmed
+2. Go to https://console.aws.amazon.com/s3/home and create a bucket called 'sportphotoz' (or another name). Make a note of the server region for step 7.
+3. Create a folder inside the sportphotoz bucket called 'marathons'
+4. Place photos in the 'marathons' directory using the following structure, substituting %marathon_name% with an all lowercase name for the marathon event, words separated by underscores. For example "2015_boston_marathon":
+
+        /sportphotoz/%marathon_name%/info.csv
+        /sportphotoz/%marathon_name%/original/ (holds big photos that customers purchase)
+        /sportphotoz/%marathon_name%/thumb/ (holds watermakred photos that show up on the application)
+
+After populating the files should look something like this:
+
+        /sportphotoz/marathons/2015_boston_marathon/info.csv
+        /sportphotoz/marathons/2015_boston_marathon/original/1524.jpg
+        /sportphotoz/marathons/2015_boston_marathon/thumb/1524.jpg
+        
+5. Set all files inside the 'thumb' folder to public.
+
+        a. In AWS go to the thumb folder
+        b. Select any file
+        c. Right click on all files and set "Properties" on the context menu
+        d. Click on "Permission" on the right side of the screen and you should see something like "Grantee: Everyone" with "Open/Download" checked
+        
+6. Create API keys
+
+        a. Go to https://console.aws.amazon.com/iam/home#users
+        b. Click "Create New Users"
+        c. Enter "sportphotozapp" and make sure "Generate an access key for each user" is checked, then click "Create"
+        d. On the next step you should see "Show User Security Credentials", press it and copy/paste your API keys to a secure place
+        e. Attach a policy to the user. Go to https://console.aws.amazon.com/iam/home?region=us-east-1#users click on user and press 'Attach Policy' and select 'AmazonS3ReadOnlyAccess'
+
+7. Copy the following to session variables
+
+        AWS_ACCESS_KEY_ID: 'your_key_id' (from step 6d)
+        AWS_SECRET_ACCESS_KEY: 'your_secret_key' (from step 6d)
+        AWS_REGION: 'bucket_server_region' (from step 2)
+        AWS_BUCKET: 'bucket_name' (should be 'marathons' from step 3)
+
+If something goes wrong you can reset the data by clearing out all data in the S3 bucket, then clean out the data in ActiveAdmin Marathons, Photos, and Participants, then try again.
