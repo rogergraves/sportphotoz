@@ -1,0 +1,14 @@
+general:
+  branches:
+    only:
+      - master
+
+machine:
+  environment:
+    CODECLIMATE_REPO_TOKEN: bb5c7362b6951d5a57c313caaabaa9c889471aebe68c4b352ef6ec4e915ea5a6
+  ruby:
+      version: 2.1.5
+
+test:
+  pre:
+      - bundle exec rake db:test:prepare
