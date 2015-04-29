@@ -11,7 +11,7 @@ The Sportphotoz app is built on:
     * Code complexity and security monitoring by CodeClimate
 
 # Build Status
-[![Circle CI](https://circleci.com/gh/rogergraves/sportphotoz/tree/master.svg?style=svg)](https://circleci.com/gh/rogergraves/sportphotoz/tree/master)
+{<img src="https://circleci.com/gh/rogergraves/sportphotoz/tree/master.svg?style=svg" alt="Circle CI" />}[https://circleci.com/gh/rogergraves/sportphotoz/tree/master]
 
 # Recommended New Development Machine Install (Mac)
 1. Install the latest version of XCode
@@ -84,9 +84,9 @@ Then to do a deploy to production:
 
         /sportphotoz/%marathon_name%/info.csv
         /sportphotoz/%marathon_name%/original/ (holds big photos that customers purchase)
-        /sportphotoz/%marathon_name%/thumb/ (holds watermakred photos that show up on the application)
+        /sportphotoz/%marathon_name%/thumb/ (holds small watermarked photos)
 
-After populating the files should look something like this:
+    After populating the files should look something like this:
 
         /sportphotoz/marathons/2015_boston_marathon/info.csv
         /sportphotoz/marathons/2015_boston_marathon/original/1524.jpg
@@ -94,18 +94,18 @@ After populating the files should look something like this:
         
 5. Set all files inside the 'thumb' folder to public.
 
-        a. In AWS go to the thumb folder
-        b. Select any file
-        c. Right click on all files and set "Properties" on the context menu
-        d. Click on "Permission" on the right side of the screen and you should see something like "Grantee: Everyone" with "Open/Download" checked
-        
+    a. In AWS go to the thumb folder
+    b. Select any file
+    c. Right click on all files and set "Properties" on the context menu
+    d. Click on "Permission" on the right side of the screen and you should see something like "Grantee: Everyone" with "Open/Download" checked
+    
 6. Create API keys
 
-        a. Go to https://console.aws.amazon.com/iam/home#users
-        b. Click "Create New Users"
-        c. Enter "sportphotozapp" and make sure "Generate an access key for each user" is checked, then click "Create"
-        d. On the next step you should see "Show User Security Credentials", press it and copy/paste your API keys to a secure place
-        e. Attach a policy to the user. Go to https://console.aws.amazon.com/iam/home?region=us-east-1#users click on user and press 'Attach Policy' and select 'AmazonS3ReadOnlyAccess'
+    a. Go to https://console.aws.amazon.com/iam/home#users
+    b. Click "Create New Users"
+    c. Enter "sportphotozapp" and make sure "Generate an access key for each user" is checked, then click "Create"
+    d. On the next step you should see "Show User Security Credentials", press it and copy/paste your API keys to a secure place
+    e. Attach a policy to the user. Go to https://console.aws.amazon.com/iam/home?region=us-east-1#users click on user and press 'Attach Policy' and select 'AmazonS3ReadOnlyAccess'
 
 7. Copy the following to session variables
 
@@ -114,4 +114,4 @@ After populating the files should look something like this:
         AWS_REGION: 'bucket_server_region' (from step 2)
         AWS_BUCKET: 'bucket_name' (should be 'marathons' from step 3)
 
-If something goes wrong you can reset the data by clearing out all data in the S3 bucket, then clean out the data in ActiveAdmin Marathons, Photos, and Participants, then try again.
+NOTE: If something goes wrong you can reset the data by clearing out all data in the S3 bucket, then clean out the data in ActiveAdmin Marathons, Photos, and Participants, then try again.
