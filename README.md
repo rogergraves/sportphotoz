@@ -11,7 +11,7 @@ The Sportphotoz app is built on:
     * Code complexity and security monitoring by CodeClimate
 
 # Build Status
-{<img src="https://circleci.com/gh/rogergraves/sportphotoz/tree/master.svg?style=svg" alt="Circle CI" />}[https://circleci.com/gh/rogergraves/sportphotoz/tree/master]
+https://circleci.com/gh/rogergraves/sportphotoz/tree/master.svg?style=svg
 
 # Recommended New Development Machine Install (Mac)
 1. Install the latest version of XCode
