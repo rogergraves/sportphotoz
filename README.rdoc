@@ -1,4 +1,4 @@
-==Welcome to the SportPhotoz App
+== Welcome to the SportPhotoz App
 The soon to be premier app for purchasing race/marathon photos
 
 The Sportphotoz app is built on:
@@ -10,10 +10,11 @@ The Sportphotoz app is built on:
     * Application monitoring by NewRelic (later)
     * Code complexity and security monitoring by CodeClimate
 
-==Build Status
+== Build Status
+
 {<img src="https://circleci.com/gh/rogergraves/sportphotoz/tree/master.svg?style=svg" alt="Circle CI" />}[https://circleci.com/gh/rogergraves/sportphotoz/tree/master]
 
-==Recommended New Development Machine Install (Mac)
+== Recommended New Development Machine Install (Mac)
 1. Install the latest version of XCode
 2. Install the optional Command Line Tools in XCode
 3. Install the latest version of Homebrew: brew.sh/
@@ -28,7 +29,7 @@ The Sportphotoz app is built on:
 12. Install the Heroku toolbelt at https://toolbelt.heroku.com/ and then restart your terminal
 12. Should be ready to roll: 'rails server'
 
-==Beginner's Guide to Changing Code
+== Beginner's Guide to Changing Code
 Every time you are ready to start work, do the following terminal commands in the wyzyr directory:
 
         $ git smart-pull
@@ -58,7 +59,7 @@ If you run into problems pushing, it's probably because somebody pushed other co
         $ git smart-pull
         $ git push origin master
 
-==Heroku Deploys
+== Heroku Deploys
 After you've installed the heroku toolbelt at https://toolbelt.heroku.com/ and created a heroku account, you'll need to log in from terminal in the sportphotoz directory:
 
         $ heroku login
