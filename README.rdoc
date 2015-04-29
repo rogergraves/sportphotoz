@@ -78,7 +78,7 @@ Then to do a deploy to production:
 
         $ git push production master
         
-#AWS Instructions
+== AWS Instructions
 
 1. Log in to your AWS account and make sure it's confirmed
 2. Go to https://console.aws.amazon.com/s3/home and create a bucket called 'sportphotoz' (or another name). Make a note of the server region for step 7.
