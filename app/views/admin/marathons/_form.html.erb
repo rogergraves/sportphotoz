@@ -1,6 +1,4 @@
-<h1>Add a new marathon</h1>
-
-<%= simple_form_for(@marathon) do |f| %>
+<%= simple_form_for([:admin, @marathon]) do |f| %>
     <%= f.input :name %>
     <%= f.input :slug %>
     <%= f.input :aws_prefix %>

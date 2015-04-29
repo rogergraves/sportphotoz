@@ -1,0 +1,8 @@
+<h1>Participants</h1>
+
+<ul>
+  <li><%= link_to "Orphan photos (#{@marathon.photos.orphans.count})", admin_marathon_photos_path(@marathon, only: :orphans) %></li>
+  <% @marathon.participants.each do |participant| %>
+      <li><%= link_to "Bib: #{participant.bib} (#{participant.photos.count})", admin_marathon_runner_path(@marathon, participant) %></li>
+  <% end %>
+</ul>

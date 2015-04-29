@@ -1,7 +1,0 @@
-<h1>Photos</h1>
-
-<ul>
-  <% @marathon.participants.each do |participant| %>
-    <li>Participant bib: <%= participant.bib %> has <%= participant.photos.count %> photos</li>
-  <% end %>
-</ul>
