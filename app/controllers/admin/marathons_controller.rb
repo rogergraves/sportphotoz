@@ -1,5 +1,4 @@
 class Admin::MarathonsController < AdminController
-  # before_action :set_bucket
 
   def index
     @marathons = Marathon.all

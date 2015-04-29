@@ -1,7 +1,7 @@
 module AwsTools
 
   def self.bucket
-    @bucket ||= Aws::S3::Resource.new.bucket('sportphotoz')
+    @bucket ||= Aws::S3::Resource.new.bucket(ENV['AWS_BUCKET'])
   end
 
   def self.get_object(key)

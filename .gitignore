@@ -28,3 +28,6 @@ server.key
 *.key
 *.psql
 *.dumpdatabase.yml
+
+# Ignore application configuration
+/config/application.yml

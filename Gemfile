@@ -22,6 +22,7 @@ gem 'mail_form', '~> 1.5.1'                           # Send e-mail straight fro
 # gem 'fog-aws'
 gem 'aws-sdk', '~> 2'                                 # S3 API
 # gem 's3_direct_upload', '~> 0.1.7'                    # direct upload form helper and assets
+gem 'figaro', '~> 1.1.0'                              # Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file
 group :production do
   gem 'rails_12factor', '~> 0.0.3'                    # Helps speed up deploys on heroku
 end
