@@ -6,7 +6,7 @@ class Participant < ActiveRecord::Base
   default_scope { order(:bib) }
 
   validates :bib, presence: true, uniqueness: { scope: [:runner, :marathon], message: 'The runner with same bib already taking part on marathon' }
-  # validates :runner_id, presence: true # TODO: do this later
+  # validates :runner, presence: true # TODO: do this later
   validates :marathon, presence: true
 
   def to_param

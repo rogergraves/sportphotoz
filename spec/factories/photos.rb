@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :photo do
-    url { Faker::Internet.url }
-    event
-    bib
+    aws_key { Faker::Internet.url }
+    marathon
+    participant
   end
 end

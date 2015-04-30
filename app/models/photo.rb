@@ -6,9 +6,8 @@ class Photo < ActiveRecord::Base
   belongs_to :marathon
 
   scope :orphans, -> { where(participant_id: nil ) }
-  
-  validates :aws_key, presence: true
-  # validates :participant_id, presence: true
+
+  validates :aws_key, presence: true, uniqueness: { scope: :marathon_id, message: 'should be once per marathon' }
   validates :marathon_id, presence: true
 
   # Generates public url for original photo for a 5 minutes
