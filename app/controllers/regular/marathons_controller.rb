@@ -1,4 +1,4 @@
-class Regular::MarathonsController < AdminController
+class Regular::MarathonsController < RegularController
 
   def index
     @marathons = Marathon.all

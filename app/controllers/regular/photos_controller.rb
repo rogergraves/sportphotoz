@@ -1,4 +1,4 @@
-class Regular::PhotosController < AdminController
+class Regular::PhotosController < RegularController
 
   def index
     if only_orphans?

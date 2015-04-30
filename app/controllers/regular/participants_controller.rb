@@ -1,4 +1,4 @@
-class Regular::ParticipantsController < AdminController
+class Regular::ParticipantsController < RegularController
 
   def show
     load_participant

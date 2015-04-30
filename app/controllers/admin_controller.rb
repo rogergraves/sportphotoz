@@ -1,3 +1,5 @@
 class AdminController < ApplicationController
-#   TODO: add check only admin can access this controller
+  layout 'admin'
+
+  before_action :authenticate_admin_user!
 end

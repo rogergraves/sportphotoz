@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   match '/contacts',  to: 'contacts#new',  via: 'get'
   resources "contacts", only: [:new, :create]
 
+  devise_for :admin_users, only: :sessions, path: 'admin'
+
   namespace :admin do
     resources :marathons do
       resources :participants
@@ -21,6 +23,7 @@ Rails.application.routes.draw do
       resources :photos, only: [:index, :show]
     end
   end
+
 
 
   # devise_for :admin_users, ActiveAdmin::Devise.config
