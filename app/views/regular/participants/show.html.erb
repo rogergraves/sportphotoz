@@ -1,0 +1,8 @@
+<h1>Runner info</h1>
+
+<h4><%= @participant.bib %></h4>
+<ul>
+  <% @participant.photos.each do |photo| %>
+      <li><%= image_tag photo.thumb_url %></li>
+  <% end %>
+</ul>

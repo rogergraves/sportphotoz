@@ -15,6 +15,13 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :regular, path: '/' do
+    resources :marathons, only: [:index, :show] do
+      resources :participants, only: [:index, :show]
+      resources :photos, only: [:index, :show]
+    end
+  end
+
 
   # devise_for :admin_users, ActiveAdmin::Devise.config
   # ActiveAdmin.routes(self)

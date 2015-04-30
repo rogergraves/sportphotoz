@@ -1,0 +1,9 @@
+<h1>Marathons list</h1>
+
+<ul>
+  <% @marathons.each do |m| %>
+      <li>
+        <%= link_to m.name, regular_marathon_path(m) %>
+      </li>
+  <% end %>
+</ul>
