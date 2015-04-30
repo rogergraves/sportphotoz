@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :marathons do
-      resources :runners
+      resources :participants
       resources :photos
     end
   end
