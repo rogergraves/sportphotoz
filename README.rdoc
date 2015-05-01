@@ -114,7 +114,7 @@ Then to do a deploy to production:
 
         a. In the command line do 'bundle install'
         b. In the command line do 'figaro install'
-        c. pen 'config/application.yml' file and add 4 keys into it:
+        c. Open 'config/application.yml' file and add 4 keys into it:
 
         AWS_ACCESS_KEY_ID: 'your_key_id' (from step 6d)
         AWS_SECRET_ACCESS_KEY: 'your_secret_key' (from step 6d)
