@@ -12,7 +12,7 @@ The Sportphotoz app is built on:
 
 == Build Status
 
-{<img src="https://circleci.com/gh/rogergraves/sportphotoz/tree/master.svg?style=svg" alt="Circle CI" />}[https://circleci.com/gh/rogergraves/sportphotoz/tree/master]
+{<img src="https://circleci.com/gh/rogergraves/sportphotoz/tree/master.svg?style=svg" />}
 {<img src="https://codeclimate.com/repos/55411897e30ba044b700825f/badges/3423b9f2967fe5548d0e/gpa.svg" />}[https://codeclimate.com/repos/55411897e30ba044b700825f/feed]
 {<img src="https://codeclimate.com/repos/55411897e30ba044b700825f/badges/3423b9f2967fe5548d0e/coverage.svg" />}[https://codeclimate.com/repos/55411897e30ba044b700825f/feed]
 
