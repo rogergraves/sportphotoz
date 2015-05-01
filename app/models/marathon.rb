@@ -13,6 +13,10 @@ class Marathon < ActiveRecord::Base
   validates :slug, presence: true, uniqueness: true
   validates :aws_prefix, presence: true, uniqueness: true
 
+  def participant(bib)
+    participants.find_by(bib: bib)
+  end
+
   def to_param
     slug
   end

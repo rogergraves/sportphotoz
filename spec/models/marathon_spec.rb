@@ -28,6 +28,12 @@ RSpec.describe Marathon, type: :model do
   end
 
   context "Instance methods" do
+    it "#participant" do
+      target_participant = create(:participant)
+      another_participant = create(:participant)
+      marathon = target_participant.marathon
+      expect(marathon.participant(target_participant.bib)).to eq(target_participant)
+    end
   end
 
   context "Class methods" do
