@@ -110,7 +110,11 @@ Then to do a deploy to production:
     d. On the next step you should see "Show User Security Credentials", press it and copy/paste your API keys to a secure place
     e. Attach a policy to the user. Go to https://console.aws.amazon.com/iam/home?region=us-east-1#users click on user and press 'Attach Policy' and select 'AmazonS3ReadOnlyAccess'
 
-7. Copy the following to session variables
+7. Add API keys to the app
+
+        a. In the command line do 'bundle install'
+        b. In the command line do 'figaro install'
+        c. pen 'config/application.yml' file and add 4 keys into it:
 
         AWS_ACCESS_KEY_ID: 'your_key_id' (from step 6d)
         AWS_SECRET_ACCESS_KEY: 'your_secret_key' (from step 6d)
