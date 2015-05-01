@@ -10,6 +10,19 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
 
+    columns do
+      column do
+        panel "Marathons" do
+          ul do
+            Marathon.all.map do |marathon|
+              li link_to marathon.name, admin_marathon_path(marathon)
+            end
+          end
+        end
+      end
+    end
+
+
     # Here is an example of a simple dashboard with columns and panels.
     #
     # columns do

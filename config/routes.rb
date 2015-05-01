@@ -12,14 +12,18 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :marathons do
-      resources :participants
+      resources :participants do
+        resources :photos
+      end
       resources :photos
     end
   end
 
   namespace :regular, path: '/' do
     resources :marathons, only: [:index, :show] do
-      resources :participants, only: [:index, :show]
+      resources :participants, only: [:index, :show] do
+        resources :photos, only: [:index, :show]
+      end
       resources :photos, only: [:index, :show]
     end
   end
