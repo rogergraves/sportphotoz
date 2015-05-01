@@ -34,10 +34,5 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-#   AWS_ACCESS_KEY_ID: 'AKIAJEBGNH3AW3JRBBOQ'
-#   AWS_SECRET_ACCESS_KEY: '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 '
-#   AWS_REGION: 'Northern California'
-#   AWS_BUCKET: 'sportphotoz'
-  
   
 end
