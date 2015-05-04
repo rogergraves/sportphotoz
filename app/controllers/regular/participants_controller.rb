@@ -11,7 +11,7 @@ class Regular::ParticipantsController < RegularController
   end
 
   def load_participant
-    @participant = Participant.find_by(bib: params[:id])
+    @participant = Participant.find_by(bib: params[:id]).decorate
   end
 
 end

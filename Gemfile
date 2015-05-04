@@ -13,6 +13,7 @@ gem 'active_admin_importable', '~> 1.1.2'             # CSV import for Active Ad
 gem 'devise', '~> 3.4.1'                              # Authentification
 gem 'bootstrap-sass', '~> 3.3.4.1'                    # Styling prototype
 gem 'simple_form', '~> 3.1.0'                         # Makes forms easy
+gem 'draper', '~> 2.1'                                # Draper adds an object-oriented layer of presentation logic to your Rails apps.
 gem 'masonry-rails', '~> 0.2.4'                       # For adaptive design
 # gem 'haml', '~> 4.0.6'                                # is a layer on top of HTML or XML that's designed to express the structure of documents
 gem 'mail_form', '~> 1.5.1'                           # Send e-mail straight from forms in Rails with I18n, validations, attachments and request information.
