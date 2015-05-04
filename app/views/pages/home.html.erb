@@ -1,21 +1,26 @@
 <div class="container">
-  <div class="col-md-6 col-md-offset-3">
-      <%= form_tag regular_marathons_path, method: :get do %>
-          <div class="form-group">
-            <%= label_tag(:event, "1. Select your Event") %>
-            <%= select_tag(:event, options_for_select(Marathon.all.map { |m| [m.name, m.slug] }), class: 'form-control') %>
-          </div>
-          <div class="form-group">
-            <%= label_tag(:bib, "2. Enter your Bib#") %>
-            <%= number_field_tag(:bib, nil, min:0, class: 'form-control') %>
-          </div>
-          <p>or</p>
-          <div class="form-group">
-            <%= label_tag(:last_name, "3. Last Name") %>
-            <%= text_field_tag(:last_name, nil, class: 'form-control') %>
-          </div>
+    <div class="page-header">
+        <h1>Home Page</h1>
+    </div>
+    <div class="container">
+        <div class="col-md-6 col-md-offset-3">
+            <%= form_tag regular_marathons_path, method: :get do %>
+                <div class="form-group">
+                  <%= label_tag(:event, "1. Select your Event") %>
+                  <%= select_tag(:event, options_for_select(Marathon.all.map { |m| [m.name, m.slug] }), class: 'form-control') %>
+                </div>
+                <div class="form-group">
+                  <%= label_tag(:bib, "2. Enter your Bib#") %>
+                  <%= number_field_tag(:bib, nil, min:0, class: 'form-control') %>
+                </div>
+                <p>or</p>
+                <div class="form-group">
+                  <%= label_tag(:last_name, "3. Last Name") %>
+                  <%= text_field_tag(:last_name, nil, class: 'form-control') %>
+                </div>
 
-          <%= submit_tag("Find My Photos!", class: "btn btn-default") %>
-      <% end %>
-  </div>
+                <%= submit_tag("Find My Photos!", class: "btn btn-default") %>
+            <% end %>
+        </div>
+    </div>
 </div>

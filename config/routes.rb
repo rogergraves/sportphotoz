@@ -28,6 +28,7 @@ Rails.application.routes.draw do
     end
   end
 
+  post 'add_to_cart', to: 'stub#add_to_cart', as: 'add_to_cart'
 
 
   # devise_for :admin_users, ActiveAdmin::Devise.config

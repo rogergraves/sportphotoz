@@ -1,0 +1,3 @@
+$('#cart_success').remove();
+$('body').append('<%= escape_javascript(render partial: 'stub/add_to_cart_example', locals: {photo: @photo}) %>');
+$('#cart_success').modal('show');

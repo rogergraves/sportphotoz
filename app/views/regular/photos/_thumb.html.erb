@@ -1,8 +1,9 @@
 <div class="col-sm-6">
-  <div class="polaroid">
-    <%= image_tag photo.thumb_url, class: 'img-responsive' %>
-    <div class="polaroid-btns">
-      <button type="button" class="btn btn-default">Add to Cart</button>&nbsp&nbsp&nbsp&nbspEnlarge <span class="glyphicon glyphicon-search"></span>
+    <div class="polaroid">
+        <%= image_tag photo.thumb_url, class: 'img-responsive' %>
+        <div class="polaroid-btns">
+            <%= link_to "Add to Cart", add_to_cart_path(photo: photo.id), class: 'btn btn-default add-to-cart-button', remote: true, method: :post %>
+            <button type="button" class="btn btn-default">Enlarge <span class="glyphicon glyphicon-search"></span></button>
+        </div>
     </div>
-  </div>
 </div>
