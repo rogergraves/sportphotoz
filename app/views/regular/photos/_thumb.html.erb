@@ -2,8 +2,14 @@
     <div class="polaroid">
         <%= image_tag photo.thumb_url, class: 'img-responsive' %>
         <div class="polaroid-btns">
-            <%= link_to "Add to Cart", add_to_cart_path(photo: photo.id), class: 'btn btn-default add-to-cart-button', remote: true, method: :post %>
-            <button type="button" class="btn btn-default">Enlarge <span class="glyphicon glyphicon-search"></span></button>
+          <%= simple_form_for [:regular, order_item], remote: true, :html => { :class => 'block-inline' } do |f| %>
+              <%= f.hidden_field :photo_id, value: photo.id %>
+              <%= f.submit "Add to Cart", class: "btn btn-primary" %>
+          <% end %>
+
+            <%#= link_to "Add to Cart", regular_order_items_path(proto: { photo_id: photo.id }), class: 'btn btn-default add-to-cart-button', remote: true, method: :post %>
+
+          <button type="button" class="btn btn-default">Enlarge <span class="glyphicon glyphicon-search"></span></button>
         </div>
     </div>
 </div>

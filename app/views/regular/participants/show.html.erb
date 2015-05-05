@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-sm-8">
             <div class="row special">
-                <%= render(partial: 'regular/photos/thumb', collection: @participant.photos, as: :photo) %>
+                <%= render(partial: 'regular/photos/thumb', collection: @participant.photos, as: :photo, locals: { order_item: @order_item }) %>
             </div>
         </div>
         <div class="col-sm-4">

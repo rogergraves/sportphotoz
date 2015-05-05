@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-sm-4">
+    <div class="row">
+      <div class="col-xs-3">
+        <h1><%= index %>.</h1>
+      </div>
+      <div class="col-xs-9">
+        <%= image_tag item.photo.thumb_url, class: 'img-responsive' %>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-8">
+    <h2>Full Resolution Digital Image</h2>
+    <h2><%= number_to_currency item.price %></h2>
+    <p style="color: #666666;">(Remove)</p>
+  </div>
+</div>

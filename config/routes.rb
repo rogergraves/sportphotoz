@@ -26,6 +26,9 @@ Rails.application.routes.draw do
       end
       resources :photos, only: [:index, :show]
     end
+
+    resource :cart, only: [:show]
+    resources :order_items, only: [:create, :update, :destroy]
   end
 
   post 'add_to_cart', to: 'stub#add_to_cart', as: 'add_to_cart'

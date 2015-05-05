@@ -8,6 +8,12 @@
 </head>
 <body>
 
+<div class="container" id="info-messages">
+    <% flash.each do |name,msg| %>
+        <%= content_tag :div, msg, class: "alert alert-info"  %>
+    <% end %>
+</div>
+
 
 <!-- Fixed navbar -->
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -26,6 +32,7 @@
         <li class="active"><a href="#">Home</a></li>
         <li><%= link_to "About", pages_about_path %></li>
         <li><%= link_to "Contact Us", contacts_path %></li>
+        <li><%= link_to "Cart", regular_cart_path %></li>
       </ul>
     </div>
   </div>

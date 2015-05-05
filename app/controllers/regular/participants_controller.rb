@@ -2,6 +2,7 @@ class Regular::ParticipantsController < RegularController
 
   def show
     load_participant
+    @order_item = current_order.order_items.new
   end
 
   private

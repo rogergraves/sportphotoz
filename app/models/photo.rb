@@ -4,6 +4,7 @@ class Photo < ActiveRecord::Base
 
   belongs_to :participant
   belongs_to :marathon
+  has_many :order_items
 
   scope :orphans, -> { where(participant_id: nil ) }
 
@@ -26,5 +27,9 @@ class Photo < ActiveRecord::Base
 
   def thumb_key
     "marathons/#{marathon.aws_prefix}/thumb/#{aws_key}"
+  end
+
+  def price
+    25.0
   end
 end
