@@ -13,7 +13,7 @@
             </div>
             <div class="col-sm-8">
               <h3>1 Photo added to cart</h3>
-              <button type="button" class="btn btn-default" data-dismiss="modal">Continue Shopping</button>
+              <%= link_to 'Continue Shopping', '', class: 'btn btn-default', data: { dismiss: 'modal' } %>
               <%= link_to 'View Cart/Checkout', regular_cart_path, class: 'btn btn-primary' %>
             </div>
           </div>

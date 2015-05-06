@@ -14,8 +14,16 @@ module UtilitySteps
     click_link link
   end
 
-  step 'the page should show :content' do |content|
+  step 'The page should show :content' do |content|
     expect(page).to have_content content
+  end
+
+  step 'Wait a second' do
+    sleep 0.5
+  end
+
+  step 'Wait :seconds seconds' do |seconds|
+    sleep seconds.to_i
   end
 
 end
