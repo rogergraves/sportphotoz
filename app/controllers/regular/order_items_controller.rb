@@ -3,20 +3,21 @@ class Regular::OrderItemsController < RegularController
     load_order
     @order_item = @order.order_items.new(order_item_params)
     @order.save
+    @order_item = @order.order_items.find_by(order_item_params)
     session[:order_id] = @order.id
-    # render nothing: true
 
     respond_to do |format|
       format.js
     end
   end
 
-  def update
-    load_order
-    load_order_item
-    @order_item.update_attributes(order_item_params)
-    @order_items = @order.order_items
-  end
+  # # TODO: think is update needed or not
+  # def update
+  #   load_order
+  #   load_order_item
+  #   @order_item.update_attributes(order_item_params)
+  #   @order_items = @order.order_items
+  # end
 
   def destroy
     load_order

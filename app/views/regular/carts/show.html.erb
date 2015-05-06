@@ -3,11 +3,13 @@
     <h1>Shopping Cart</h1>
   </div>
 
-  <div class="container">
+  <div class="container cart-items">
+    <%= render partial: 'regular/carts/items', locals: { items: @order_items } %>
     <%#= render(partial: 'regular/carts/item_big', collection: @order_items, as: :item) %>
-    <% @order_items.each_with_index do |order, index| %>
-        <%= render(partial: 'regular/carts/item_big', locals: { item: order, index: (index + 1) } ) %>
-        <hr>
-    <% end %>
+
+    <%# @order_items.each_with_index do |order, index| %>
+        <%#= render(partial: 'regular/carts/item_big', locals: { item: order, index: (index + 1) } ) %>
+        <!--<hr>-->
+    <%# end %>
   </div>
 </div>

@@ -31,9 +31,6 @@ Rails.application.routes.draw do
     resources :order_items, only: [:create, :update, :destroy]
   end
 
-  post 'add_to_cart', to: 'stub#add_to_cart', as: 'add_to_cart'
-
-
   # devise_for :admin_users, ActiveAdmin::Devise.config
   # ActiveAdmin.routes(self)
 

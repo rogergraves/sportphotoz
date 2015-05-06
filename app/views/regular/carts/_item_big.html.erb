@@ -12,6 +12,6 @@
   <div class="col-sm-8">
     <h2>Full Resolution Digital Image</h2>
     <h2><%= number_to_currency item.price %></h2>
-    <p style="color: #666666;">(Remove)</p>
+    <%= link_to "Remove", regular_order_item_path(item), { data: { confirm: 'Are you sure you wish to delete this photo from your cart?'}, method: :delete, remote: true, class: "btn btn-danger" } %>
   </div>
 </div>

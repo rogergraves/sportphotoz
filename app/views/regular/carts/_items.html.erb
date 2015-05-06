@@ -1,0 +1,4 @@
+<% items.each_with_index do |order, index| %>
+    <%= render(partial: 'regular/carts/item_big', locals: { item: order, index: (index + 1) } ) %>
+    <hr>
+<% end %>

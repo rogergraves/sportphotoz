@@ -1,1 +1,10 @@
-$('#info-messages').append('<div class="alert alert-info">Photo added to the <%= link_to 'cart', regular_cart_path %></div>');
+// Show popup
+$('.item_popup').remove();
+$('body').prepend('<%= escape_javascript(render partial: 'regular/order_items/popup', locals: { item: @order_item }) %>');
+$('.item_popup').modal('show');
+
+// Change 'Add to cart' button
+$('#photo_<%= @order_item.photo.id %>').find('form#new_order_item > input[type="submit"]') .attr({
+    value: 'In Cart',
+    disabled: true
+});

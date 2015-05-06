@@ -1,0 +1,9 @@
+// If Remove pressed on popup
+//var item_popup = $('.item_popup');
+//item_popup.modal('hide');
+//item_popup.on('hidden.bs.modal', function (e) {
+//    item_popup.remove();
+//});
+
+// If Remove pressed inside the cart
+$(".cart-items").html("<%= escape_javascript(render partial: 'regular/carts/items', locals: { items: @order_items }) %>")
