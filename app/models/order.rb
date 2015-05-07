@@ -7,6 +7,18 @@ class Order < ActiveRecord::Base
     order_items.collect { |oi| oi.valid? ? oi.price : 0 }.sum
   end
 
+  def subtotal_cents
+    Integer(subtotal * 100)
+  end
+
+  def empty?
+    subtotal_cents == 0
+  end
+
+  def paid!
+    self.update_columns(paid: true)
+  end
+
   private
 
   def update_subtotal

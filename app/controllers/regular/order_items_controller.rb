@@ -1,7 +1,8 @@
 class Regular::OrderItemsController < RegularController
   def create
     load_order
-    @order_item = @order.order_items.new(order_item_params)
+    # @order_item = @order.order_items.new(order_item_params)
+    @order_item = @order.order_items.build(order_item_params)
     @order.save
     @order_item = @order.order_items.find_by(order_item_params)
     session[:order_id] = @order.id

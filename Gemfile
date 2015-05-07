@@ -15,15 +15,10 @@ gem 'bootstrap-sass', '~> 3.3.4.1'                    # Styling prototype
 gem 'simple_form', '~> 3.1.0'                         # Makes forms easy
 gem 'draper', '~> 2.1'                                # Draper adds an object-oriented layer of presentation logic to your Rails apps.
 gem 'masonry-rails', '~> 0.2.4'                       # For adaptive design
-# gem 'haml', '~> 4.0.6'                                # is a layer on top of HTML or XML that's designed to express the structure of documents
 gem 'mail_form', '~> 1.5.1'                           # Send e-mail straight from forms in Rails with I18n, validations, attachments and request information.
-# gem 'paperclip', '~> 4.2.1'                           # Easy upload management for ActiveRecord
-# gem 'carrierwave'
-# gem 'fog'
-# gem 'fog-aws'
 gem 'aws-sdk', '~> 2'                                 # S3 API
-# gem 's3_direct_upload', '~> 0.1.7'                    # direct upload form helper and assets
 gem 'figaro', '~> 1.1.0'                              # Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file
+gem 'stripe', '~> 1.21'                               # Stripe is the easiest way to accept payments online.
 group :production do
   gem 'rails_12factor', '~> 0.0.3'                    # Helps speed up deploys on heroku
 end

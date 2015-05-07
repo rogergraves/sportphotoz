@@ -29,6 +29,7 @@ Rails.application.routes.draw do
 
     resource :cart, only: [:show]
     resources :order_items, only: [:create, :update, :destroy]
+    resources :charges, only: [:new, :create]
   end
 
   # devise_for :admin_users, ActiveAdmin::Devise.config

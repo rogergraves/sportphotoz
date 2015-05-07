@@ -8,8 +8,9 @@
     <%#= render(partial: 'regular/carts/item_big', collection: @order_items, as: :item) %>
 
     <%# @order_items.each_with_index do |order, index| %>
-        <%#= render(partial: 'regular/carts/item_big', locals: { item: order, index: (index + 1) } ) %>
-        <!--<hr>-->
+    <%#= render(partial: 'regular/carts/item_big', locals: { item: order, index: (index + 1) } ) %>
+    <!--<hr>-->
     <%# end %>
   </div>
+  <%= link_to 'Checkout', new_regular_charge_path, class: 'btn btn-primary' %>
 </div>

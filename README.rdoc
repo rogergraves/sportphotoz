@@ -122,3 +122,39 @@ Then to do a deploy to production:
         AWS_BUCKET: 'bucket_name' (should be 'marathons' from step 3)
 
 NOTE: If something goes wrong you can reset the data by clearing out all data in the S3 bucket, then clean out the data in ActiveAdmin Marathons, Photos, and Participants, then try again.
+
+== Stripe Instructions
+
+1. Go to https://dashboard.stripe.com/account/apikeys
+2. Copy test keys into your config/application.yml file
+
+        # config/application.yml
+
+        mike_dev_keys: &default
+          # Amazon keys
+          AWS_ACCESS_KEY_ID: 'secret'
+          AWS_SECRET_ACCESS_KEY: 'secret'
+          AWS_REGION: 'us-west-1'
+          AWS_BUCKET: 'bucket_name'
+
+          #Stripe
+          STRIPE_PUBLISHABLE_KEY: 'secret'
+          STRIPE_SECRET_KEY: 'secret'
+
+
+        development:
+          <<: *default
+
+        test:
+          <<: *default
+
+        production:
+          # Amazon keys
+          AWS_ACCESS_KEY_ID: 'secret'
+          AWS_SECRET_ACCESS_KEY: 'secret'
+          AWS_REGION: 'us-west-1'
+          AWS_BUCKET: 'bucket_name'
+
+          #Stripe
+          STRIPE_PUBLISHABLE_KEY: 'secret'
+          STRIPE_SECRET_KEY: 'secret'

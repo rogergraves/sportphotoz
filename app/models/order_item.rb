@@ -2,8 +2,7 @@ class OrderItem < ActiveRecord::Base
   belongs_to :photo
   belongs_to :order
 
-  validates :photo, presence: true, uniqueness: true
-  validates :order, presence: true
+  validates :photo, presence: true, uniqueness: { scope: :order }
 
   before_save :set_price
 
