@@ -158,3 +158,9 @@ NOTE: If something goes wrong you can reset the data by clearing out all data in
           #Stripe
           STRIPE_PUBLISHABLE_KEY: 'secret'
           STRIPE_SECRET_KEY: 'secret'
+
+== Mailer Instructions
+Copy GMail login and password into your config/application.yml file
+
+        GMAIL_LOGIN: 'login'
+        GMAIL_PASSWORD: 'password'
