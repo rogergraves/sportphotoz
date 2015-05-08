@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="page-header">
+    <h1>Ordered photos</h1>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="row special">
+          <%= render(partial: 'regular/photos/bought_photos', collection: @order.order_items.map { |order| order.photo}, as: :photo) %>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <h3>Right-hand column is for advertisements</h3>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="col-sm-6" id="photo_<%= photo.id %>">
+  <div class="polaroid">
+    <%= image_tag photo.thumb_url, class: 'img-responsive' %>
+    <div class="polaroid-btns">
+      <%= link_to 'Original photo', photo.original_url, class: 'btn btn-primary' %>
+    </div>
+  </div>
+</div>
