@@ -8,17 +8,6 @@ Rails.application.routes.draw do
   match '/contacts',  to: 'contacts#new',  via: 'get'
   resources "contacts", only: [:new, :create]
 
-  devise_for :admin_users, only: :sessions, path: 'admin'
-
-  namespace :admin do
-    resources :marathons do
-      resources :participants do
-        resources :photos
-      end
-      resources :photos
-    end
-  end
-
   namespace :regular, path: '/' do
     resources :marathons, only: [:index, :show] do
       resources :participants, only: [:index, :show] do
@@ -33,8 +22,8 @@ Rails.application.routes.draw do
     resources :charges, only: [:new, :create]
   end
 
-  # devise_for :admin_users, ActiveAdmin::Devise.config
-  # ActiveAdmin.routes(self)
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -4,8 +4,8 @@ class Regular::OrderItemsController < RegularController
     # @order_item = @order.order_items.new(order_item_params)
     @order_item = @order.order_items.build(order_item_params)
     @order.save
+    save_order_to_session(@order)
     @order_item = @order.order_items.find_by(order_item_params)
-    session[:order_id] = @order.id
 
     respond_to do |format|
       format.js

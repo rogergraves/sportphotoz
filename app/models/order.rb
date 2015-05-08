@@ -4,6 +4,9 @@ class Order < ActiveRecord::Base
   before_create :generate_slug
   before_save :update_subtotal
 
+  scope :paid, -> { where(paid: true) }
+  scope :not_paid, -> { where(paid: false) }
+
   def subtotal
     order_items.collect { |oi| oi.valid? ? oi.price : 0 }.sum
   end

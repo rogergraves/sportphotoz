@@ -76,9 +76,9 @@ ActiveRecord::Schema.define(version: 20150508100037) do
     t.decimal  "subtotal",   precision: 12, scale: 3
     t.decimal  "tax",        precision: 12, scale: 3
     t.decimal  "total",      precision: 12, scale: 3
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.boolean  "paid"
+    t.datetime "created_at",                                          null: false
+    t.datetime "updated_at",                                          null: false
+    t.boolean  "paid",                                default: false
     t.string   "slug"
     t.string   "email"
   end

@@ -39,7 +39,7 @@ class Regular::ChargesController < RegularController
 
   def close_order
     @order.paid!(params[:stripeEmail])
-    session[:order_id] = nil
+    clean_order_session
   end
 
   def send_thanks_email
