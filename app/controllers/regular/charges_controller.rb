@@ -11,7 +11,7 @@ class Regular::ChargesController < RegularController
     end
 
     customer = Stripe::Customer.create(
-        :email => 'example@stripe.com',
+        :email => params[:stripeEmail],
         :card  => params[:stripeToken]
     )
 
@@ -26,9 +26,9 @@ class Regular::ChargesController < RegularController
     flash[:error] = e.message
     redirect_to charges_path
   else
-    # If payment ok and no errors raised
+    # If payment is OK and no errors raised
     close_order
-    # TODO: send email with link to the order
+    send_thanks_email
   end
 
   private
@@ -38,7 +38,11 @@ class Regular::ChargesController < RegularController
   end
 
   def close_order
-    @order.paid!
+    @order.paid!(params[:stripeEmail])
     session[:order_id] = nil
+  end
+
+  def send_thanks_email
+    OrderMailer.thanks_for_purchasing(params[:stripeEmail], @order).deliver_now
   end
 end

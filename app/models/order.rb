@@ -16,8 +16,8 @@ class Order < ActiveRecord::Base
     subtotal_cents == 0
   end
 
-  def paid!
-    self.update_columns(paid: true)
+  def paid!(email)
+    self.update_columns(paid: true, email: email)
   end
 
   def to_param
